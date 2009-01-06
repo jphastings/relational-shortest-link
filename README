@@ -5,6 +5,8 @@ Now you can find out! Huzzah!
 BE NICE to the poor servers! Don't leave this script running for long periods of time. I know it doesn't make an enormous number of calls (its pretty slow :P) but it makes a lot more than you would by yourself.
 !! THANK YOU !!
 
+If you want to use this and you have no clue what you're doing, take a look at the README inside the 'bin' directory.
+
 You'll want to mess with the first few lines of 'shortest.rb', here's an example of the output from a run I just completed:
 
 Going from 'Naturita,_Colorado' to 'Kevin_Bacon' using Wikipedia (en)

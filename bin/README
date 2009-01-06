@@ -1,0 +1,47 @@
+Windows
+=======
+Seeing as installing ruby is a bit of an effort for such a little app for you
+guys I've compiled a binary for you.
+
+Its a bit spooky all this command-line stuff in windows, so bear with me.
+ - Hit Start and click on 'Run' (Windows-R) and type 'cmd' in the box that
+   pops up.
+ - Navigate to the directory the exe is in (The simplest way to do this is to
+   put the exe on your desktop and type 'cd Desktop' in cmd's black box)
+ - Now you can play! Try these:
+    shortest.exe wikipedia Chuck_Norris David_Hasslehoff
+    shortest.exe wikipedia Special:Random Special_Random
+    shortest.exe wikipedia
+    shortest.exe lastfm_artists Muse The_Who
+    shortest.exe lastfm_tracks "This_Love|Maroon_5" "Musicology|Prince"
+
+Hmmm, looks like lastfm_tracks won't work at the moment (the treshold for tracks being similar is set to 75%, which is too high for tracks) - I'll fix this soon!
+
+Mac OS X & Linux
+================
+
+If you're new to Mac OS, congratulations! You're going to delve into the world
+of the terminal. Don't worry its not painful.
+
+Linux users, you should know what you're doing, the instructions below are
+basically identical anyways.
+
+ - Open up Terminal (Its in /Applications/Utilities/)
+ - Make sure you have the required files installed, type what comes after the
+   dollar sign:
+    $ sudo gem install hpricot
+    (type in your password here)
+ - Simple eh? Now you can play! Just navigate to the directory with the
+   scripts in. If they're in your home directory at
+   'Documents/relational-shortest-link' then you'd type:
+    $ cd ~/Documents/relational-shortest-link
+ - Now have a play around!
+    $ ./shortest.rb wikipedia Chuck_Norris David_Hasslehoff
+
+You can figure out the other examples from the wnidows section above - I'm
+lazy :D
+
+Let me know your thoughts - tweet me: @kedakai
+
+JP Hastings-Spital
+projects.kedakai.co.uk
