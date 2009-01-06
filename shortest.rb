@@ -1,16 +1,16 @@
-#require 'wikipedia'
-#fetcher = Wikipedia.new
+require 'wikipedia'
+fetcher = Wikipedia.new
 
-#start = fetcher.makeID("Special:Random")
-#goal  = fetcher.makeID("Kevin Bacon")
+start = fetcher.makeID("Special:Random")
+goal  = fetcher.makeID("Kevin Bacon")
 
-require 'lastfm'
-fetcher = Lastfm_tracks.new
+#require 'lastfm'
+#fetcher = Lastfm_tracks.new
 
-fetcher.threshold = 15
+#fetcher.threshold = 15
 
-start = fetcher.makeID("This Love|Maroon 5")
-goal  = fetcher.makeID("Kryptonite|3 Doors Down")
+#start = fetcher.makeID("This Love|Maroon 5")
+#goal  = fetcher.makeID("Kryptonite|3 Doors Down")
 
 #require 'lastfm'
 #fetcher = Lastfm_artists.new
