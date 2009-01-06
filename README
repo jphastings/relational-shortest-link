@@ -1,5 +1,26 @@
-JP Hastings-Spital
-projects.kedakai.co.uk
-
 Ever wondered what the shortest number of links between two wikipedia articles is?
 Now you can find out! Huzzah!
+
+!! WARNING !!
+BE NICE to the poor servers! Don't leave this script running for long periods of time. I know it doesn't make an enormous number of calls (its pretty slow :P) but it makes a lot more than you would by yourself.
+!! THANK YOU !!
+
+You'll want to mess with the first few lines of 'shortest.rb', here's an example of the output from a run I just completed:
+
+Going from 'Naturita,_Colorado' to 'Kevin_Bacon' using Wikipedia (en)
+Grabbing 'Naturita,_Colorado' ... 48 links
+Grabbing 'Kevin_Bacon' ... 204 links
+Grabbing 'Montrose_County,_Colorado' ... 59 links
+Grabbing 'Kevin_Bacon_(producer)' ... 21 links
+Grabbing 'Colorado' ... 768 links
+Grabbing 'Philadelphia,_Pennsylvania' ... 705 links
+Grabbing 'List_of_countries' ... 565 links
+Grabbing 'Kyra_Sedgwick' ... 123 links
+Grabbing 'United_States' ... 1017 links
+Grabbing 'Golden_Globe_Award' ... 86 links
+The shortest path from Naturita,_Colorado to Kevin_Bacon using Wikipedia (en)
+ Naturita,_Colorado > United_States > Golden_Globe_Award > Kevin_Bacon
+
+--
+JP Hastings-Spital
+projects.kedakai.co.uk
