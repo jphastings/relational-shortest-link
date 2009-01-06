@@ -1,3 +1,7 @@
+# This scrapes the webpages themselves. Its horifically inefficient as the script
+# has to make 2 calls for every link to make sure its not a redirect. I'll be updating
+# it to use the wikimedia API... after I've finished my physics degree exams next week O_O
+
 class Wikipedia
   attr_accessor :region
   attr_reader :description
