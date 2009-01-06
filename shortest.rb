@@ -1,22 +1,34 @@
-require 'wikipedia'
-fetcher = Wikipedia.new
+#!/usr/bin/env ruby
 
-start = fetcher.makeID("Special:Random")
-goal  = fetcher.makeID("Kevin Bacon")
+case ARGV[0]
+when "wikipedia"
+  require 'wikipedia'
+  fetcher = Wikipedia.new
 
-#require 'lastfm'
-#fetcher = Lastfm_tracks.new
+  start = fetcher.makeID((ARGV[1]) ? ARGV[1] : "Special:Random")
+  goal  = fetcher.makeID((ARGV[2]) ? ARGV[2] : "Kevin Bacon")
 
-#fetcher.threshold = 15
+when "lastfm_tracks"
+  require 'lastfm'
+  fetcher = Lastfm_tracks.new
 
-#start = fetcher.makeID("This Love|Maroon 5")
-#goal  = fetcher.makeID("Kryptonite|3 Doors Down")
+  fetcher.threshold = 15
 
-#require 'lastfm'
-#fetcher = Lastfm_artists.new
+  start = fetcher.makeID((ARGV[1]) ? ARGV[1] : "This Love|Maroon 5")
+  goal  = fetcher.makeID((ARGV[2]) ? ARGV[2] : "Kryptonite|3 Doors Down")
 
-#start = fetcher.makeID("Muse")
-#goal  = fetcher.makeID("Bonobo")
+when "lastfm_artists"
+  require 'lastfm'
+  fetcher = Lastfm_artists.new
+
+  start = fetcher.makeID((ARGV[1]) ? ARGV[1] : "Muse")
+  goal  = fetcher.makeID((ARGV[2]) ? ARGV[2] : "The Strokes")
+else
+  puts "Usage: ruby shortest.rb <module> [<start point> [<end point>]]"
+  puts " Currently supported Modules: wikipedia, lastfm_tracks, lastfm_artists"
+  Process.exit
+end
+
 
 ## Nothing more to edit here unless you wanna change the code
 
