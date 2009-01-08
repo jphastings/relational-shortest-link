@@ -41,7 +41,7 @@ class Lastfm
     cachename = "cache/#{@cacheroot}."+URI.escape(id).gsub(/\//,"_")+".links.txt"
     if File.exists?(cachename)
       links = open(cachename).readlines.collect{|link| link.strip}
-      puts " Cached  '"+displayname(id)+"' >>> "+links.length.to_s
+      puts " Cached  '"+displayname(id)+"' >>> "+links.length.to_s+" links"
       return links
     end
     
@@ -100,6 +100,10 @@ class Lastfm_artists < Lastfm
   def displayname(id)
     URI.unescape(id)
   end
+  
+  def self.displayname(id)
+    URI.unescape(id)
+  end
 end
 
 class Lastfm_tracks < Lastfm
@@ -143,6 +147,12 @@ class Lastfm_tracks < Lastfm
   end
   
   def displayname(id)
+    track, artist = id.split("|")
+    
+    "#{track} (#{artist})"
+  end
+  
+  def self.displayname(id)
     track, artist = id.split("|")
     
     "#{track} (#{artist})"

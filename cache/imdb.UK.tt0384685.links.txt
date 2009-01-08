@@ -1,0 +1,16 @@
+nm0000261|Karen Allen|A
+nm0000102|Kevin Bacon|A
+nm0089244|Verna Bloom|A
+nm1668791|Jennifer Freeman|A
+nm0299122|Stephen Furst|A
+nm1742062|Henry Herzog|A
+nm0422221|DeWayne Jessie|A
+nm0000484|John Landis|A
+nm0001513|Tim Matheson|A
+nm0569226|Bruce McGill|A
+nm0588082|Chris Miller|A
+nm0607315|Stephen J. Morrison|A
+nm0726200|Peter Riegert|A
+nm0006700|Martha Smith|A
+nm0006893|John Vernon|A
+nm0927042|James Widdoes|A

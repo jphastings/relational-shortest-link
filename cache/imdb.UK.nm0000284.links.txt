@@ -1,0 +1,92 @@
+tt1053880|Little Fish, Strange Pond|F
+tt0934814|"Chuck"|TV
+tt0395843|"CSI: NY"|TV
+tt0817538|Drillbit Taylor|F
+tt0810880|Gospel Hill|F
+tt0853117|Half-Life 2: Episode Two|VG
+tt0494232|Halo 3|VG
+tt0934706|Superman: Doomsday|F
+tt0977663|Sands of Oblivion|TV
+tt0801425|"Day Break"|TV
+tt0490527|The Thirst|F
+tt0235923|"Invader ZIM"|TV
+tt0460627|"Bones"|TV
+tt0492864|"Talk to Me"|TV
+tt0419358|The Poseidon Adventure|TV
+tt0379786|Serenity|F
+tt0412148|"The Inside"|TV
+tt0275137|"Justice League"|TV
+tt0459657|Molly & Roni's Dance Party|F
+tt0259141|"Jackie Chan Adventures"|TV
+tt0404031|Evil Eyes|F
+tt0379790|The Freediver|F
+tt0162065|"Angel"|TV
+tt0364845|"Navy NCIS: Naval Criminal Investigative Service"|TV
+tt0118480|"Stargate SG-1"|TV
+tt0112022|"JAG"|TV
+tt0382779|Kill.switch|VG
+tt0303461|"Firefly"|TV
+tt0330181|Gacy|F
+tt0303758|Betrayal|F
+tt0313043|"CSI: Miami"|TV
+tt0330171|Control Factor|TV
+tt0363827|Monster Makers|TV
+tt0284233|The Keyman|F
+tt0106179|"The X Files"|TV
+tt0304176|Hyper Sonic|F
+tt0251057|Double Bang|F
+tt0184457|Farewell, My Love|F
+tt0261755|Jackpot|F
+tt0279623|Above & Beyond|F
+tt0260662|"The Zeta Project"|TV
+tt0247729|"Static Shock"|TV
+tt0243508|Pursuit of Happiness|F
+tt0196223|The Right Temptation|F
+tt0187393|The Patriot|F
+tt0230158|Dr. Jekyll and Mr. Hyde|TV
+tt0112111|"The Outer Limits"|TV
+tt0126965|Indiscreet|TV
+tt0156554|Gargantua|TV
+tt0120570|"From the Earth to the Moon"|TV
+tt0118509|"The Visitor"|TV
+tt0115126|"The Cape"|TV
+tt0120200|Starquest II|F
+tt0116934|Lover's Knot|F
+tt0116629|Independence Day|F
+tt0114712|Trade-Off|TV
+tt0117671|Smoke Jumpers|TV
+tt0304696|Shadow-Ops|TV
+tt0113347|How to Make an American Quilt|F
+tt0112867|Digital Man|F
+tt0114343|Sawbones|TV
+tt0112209|"VR.5"|TV
+tt0105994|"Fallen Angels"|TV
+tt0111756|Wyatt Earp|F
+tt0109294|Blind Justice|TV
+tt0111480|Treacherous|F
+tt0106418|Bitter Harvest|F
+tt0173976|The Last Shot|TV
+tt0106586|Cold Sweat|F
+tt0106796|Eight Hundred Leagues Down the Amazon|F
+tt0105810|Where the Day Takes You|F
+tt0104031|Cruel Doubt|TV
+tt0106683|Deadbolt|TV
+tt0105211|Radio Flyer|F
+tt0102483|Murder in High Places|TV
+tt0101984|Guilty by Suspicion|F
+tt0100403|Predator 2|F
+tt0097967|Next of Kin|F
+tt0094869|The Chocolate War|F
+tt0097074|Cohen and Tate|F
+tt0093058|Full Metal Jacket|F
+tt0090564|3:15|F
+tt0090688|Bad Guys|F
+tt0092198|Welcome Home, Bobby|TV
+tt0089820|Poison Ivy|TV
+tt1043199|"NBC Special Treat"|TV
+tt0087834|Pigs vs. Freaks|TV
+tt0087983|Reckless|F
+tt0087378|Hadley's Rebellion|F
+tt0085387|D.C. Cab|F
+tt0081283|Ordinary People|F
+tt0081207|My Bodyguard|F

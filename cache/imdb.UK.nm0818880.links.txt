@@ -1,0 +1,35 @@
+tt0108757|"ER"|TV
+tt0410975|"Desperate Housewives"|TV
+tt1013753|Milk|F
+tt0451214|Stone & Ed|F
+tt0203259|"Law & Order: Special Victims Unit"|TV
+tt0825346|And Then Came Love|F
+tt0813715|"Heroes"|TV
+tt0361217|"Nip/Tuck"|TV
+tt0285331|"24"|TV
+tt0413573|"Grey's Anatomy"|TV
+tt0157246|"Will & Grace"|TV
+tt0285333|"Alias"|TV
+tt0318883|"Everwood"|TV
+tt0409570|"Huff"|TV
+tt0372334|House of D|F
+tt0321021|"Without a Trace"|TV
+tt0345074|Connie and Carla|F
+tt0106004|"Frasier"|TV
+tt0353849|Our Town|TV
+tt0285356|"The Education of Max Bickford"|TV
+tt0247091|"Ed"|TV
+tt0258470|Bubble Boy|F
+tt0098844|"Law & Order"|TV
+tt0150216|Cradle Will Rock|F
+tt0129332|Ravenous|F
+tt0120417|The Unknown Cyclist|F
+tt0119223|Great Expectations|F
+tt0120498|What the Deaf Man Heard|TV
+tt0119395|The Jackal|F
+tt0132914|David Searching|F
+tt0119578|Love! Valour! Compassion!|F
+tt0116269|Faithful|F
+tt0114616|Tarantella|F
+tt0114857|Virtuosity|F
+tt0106273|And the Band Played On|TV

@@ -1,9 +1,10 @@
 #!/usr/bin/env ruby
 require 'wikipedia'
 require 'lastfm'
+require 'imdb'
 require 'library'
 
-modules = ["wikipedia","lastfm_artists","lastfm_tracks"]
+modules = ["wikipedia","imdb","lastfm_artists","lastfm_tracks"]
 
 command = ARGV
 $stdout.sync = true
@@ -27,25 +28,30 @@ if command.include? "-i"
   # There has to be a better way of doing this...
   case command[0]
   when "wikipedia"
-    opts = Wikipedia::Opts
-    defaults = Wikipedia::Defaults
+    chosen = Wikipedia
+  when "imdb"
+    chosen = IMDB
   when "lastfm_artists"
-    opts = Lastfm_artists::Opts
-    defaults = Lastfm_artists::Defaults
+    chosen = Lastfm_artists
   when "lastfm_tracks"
-    opts = Lastfm_tracks::Opts
-    defaults = Lastfm_tracks::Defaults
+    chosen = Lastfm_tracks
+  else
+    puts "We don't have that module available"
+    Process.exit
   end
   
+  opts = chosen::Opts
+  defaults = chosen::Defaults
+  
   default = (command[1].nil?) ? defaults[0] : command[1]
-  print "Where would you like to start? [#{default}] "
+  print "Where would you like to start? ["+chosen.displayname(default)+"] "
   command[1] = $stdin.gets.strip
   if command[1].empty?
     command[1] = default
   end
   
   default = (command[2].nil?) ? defaults[1] : command[2]
-  print "Where would you like to start? [#{default}] "
+  print "Where would you like to start? ["+chosen.displayname(default)+"] "
   command[2] = $stdin.gets.strip
   if command[2].empty?
     command[2] = default
@@ -82,6 +88,20 @@ when "wikipedia"
   start = fetcher.makeID((command[1]) ? command[1] : "Special:Random")
   goal  = fetcher.makeID((command[2]) ? command[2] : "Kevin Bacon")
 
+when "imdb"
+  fetcher = IMDB.new
+  
+  if not command[3].nil?
+    fetcher.region = command[3]
+  end
+  
+  if not command[4].nil?
+    fetcher.othertitles = (command[4] =~ /y|true/i) ? true : false
+  end
+  
+  start = fetcher.makeID((command[1]) ? command[1] : "Special:Random")
+  goal  = fetcher.makeID((command[2]) ? command[2] : "Kevin Bacon")
+
 when "lastfm_tracks"
   fetcher = Lastfm_tracks.new
   
@@ -111,7 +131,7 @@ end
 
 puts "Going from '"+fetcher.displayname(start)+"' to '"+fetcher.displayname(goal)+"' using "+fetcher.description
 
-if fetcher.canreverselookup?
+if (not fetcher.directional?) or fetcher.canreverselookup?
   # Two directional lookup
   
   done = [[],[]]

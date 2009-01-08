@@ -4,7 +4,7 @@
 
 require 'rubygems'
 require 'hpricot'
-require 'open-uri'
+require 'library'
 require 'uri'
 
 class Wikipedia
@@ -27,7 +27,7 @@ class Wikipedia
   
   def region=(region)
     if not Regions.include? region
-      raise "Sorry, #{region} isn't a valid region - use: "+allowed.join(", ")
+      raise "Sorry, #{region} isn't a valid region - use: "+Regions.join(", ")
     end
     @region = region
     setdesc
@@ -94,7 +94,7 @@ class Wikipedia
     cachename = "cache/#{@cacheroot}.#{id}.links_to.txt"
     if File.exists?(cachename)
       links = open(cachename).readlines.collect{|link| link.strip}
-      puts " Cached  '"+displayname(id)+"' <<< "+links.length.to_s
+      puts " Cached  '"+displayname(id)+"' <<< "+links.length.to_s+" links"
       return links
     end
       
@@ -155,6 +155,10 @@ class Wikipedia
   end
   
   def displayname(id)
+    URI.unescape(id).gsub(/_/," ")
+  end
+  
+  def self.displayname(id)
     URI.unescape(id).gsub(/_/," ")
   end
 end

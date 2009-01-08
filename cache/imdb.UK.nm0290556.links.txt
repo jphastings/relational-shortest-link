@@ -1,0 +1,45 @@
+tt1049402|Howl|F
+tt1270277|Sympathy for Delicious|F
+tt1013753|Milk|F
+tt0956038|Nights in Rodanthe|F
+tt0910936|Pineapple Express|F
+tt1132273|Tangled Web: The Love Triangles of Spider-Man 3|F
+tt0478134|In the Valley of Elah|F
+tt0837564|Spider-Man 3|VG
+tt0469913|Good Time Max|F
+tt0413300|Spider-Man 3|F
+tt0462219|Camille|F
+tt0843850|Finishing the Game: The Search for a New Bruce Lee|F
+tt0480269|Interview|F
+tt0802948|An American Crime|F
+tt0783238|The Dead Girl|F
+tt0814124|Grasshopper|F
+tt0450345|The Wicker Man|F
+tt0454824|Flyboys|F
+tt0417433|Annapolis|F
+tt0375154|Tristan + Isolde|F
+tt0326905|The Great Raid|F
+tt0403848|The Ape|F
+tt0415806|Fool's Gold|F
+tt0316654|Spider-Man 2|F
+tt0335013|The Company|F
+tt0403923|The Car Kid|F
+tt0269095|City by the Sea|F
+tt0305973|Sonny|F
+tt0294380|Blind Spot|F
+tt0284320|Mother Ghost|F
+tt0346165|You Always Stalk the Ones You Love|F
+tt0231448|Deuces Wild|F
+tt0145487|Spider-Man|F
+tt0245270|Mean People Suck|F
+tt0240628|James Dean|TV
+tt0274868|Some Body|F
+tt0106179|"The X Files"|TV
+tt0193676|"Freaks and Geeks"|TV
+tt0244981|At Any Cost|TV
+tt0202402|Whatever It Takes|F
+tt0231781|If Tomorrow Comes|F
+tt0151738|Never Been Kissed|F
+tt0115322|"Profiler"|TV
+tt0181216|To Serve and Protect|TV
+tt0112112|"Pacific Blue"|TV

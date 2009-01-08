@@ -1,0 +1,64 @@
+tt1185431|My One and Only|F
+tt1019454|Taking Chance|F
+tt0870111|Frost/Nixon|F
+tt0808399|New York, I Love You|F
+tt0478259|Saving Angelo|F
+tt0822849|Rails & Ties|F
+tt0804461|Death Sentence|F
+tt0485851|The Air I Breathe|F
+tt0373450|Where the Truth Lies|F
+tt0388500|Beauty Shop|F
+tt0388213|Loverboy|F
+tt0367587|Cavedweller|TV
+tt0361127|The Woodsman|F
+tt0199626|In the Cut|F
+tt0327056|Mystic River|F
+tt0384685|Where Are They Now?: A Delta Alumni Update|F
+tt0280380|Trapped|F
+tt0234354|Novocaine|F
+tt0164052|Hollow Man|F
+tt0156812|My Dog Skip|F
+tt0164181|Stir of Echoes|F
+tt0120890|Wild Things|F
+tt0118980|Digging to China|F
+tt0120303|Telling Lies in America|F
+tt0118967|Destination Anywhere|F
+tt0119896|Picture Perfect|F
+tt0117665|Sleepers|F
+tt0112453|Balto|F
+tt0112384|Apollo 13|F
+tt0113870|Murder in the First|F
+tt0106004|"Frasier"|TV
+tt0110997|The River Wild|F
+tt0109067|The Air Up There|F
+tt0123191|New York Skyride|F
+tt0104257|A Few Good Men|F
+tt0102138|JFK|F
+tt0102011|He Said, She Said|F
+tt0102741|Queens Logic|F
+tt0102733|Pyrates|F
+tt0099582|Flatliners|F
+tt0100814|Tremors|F
+tt0096926|The Big Picture|F
+tt0097125|Criminal Law|F
+tt0096094|She's Having a Baby|F
+tt0093403|Lemon Sky|TV
+tt0093748|Planes, Trains & Automobiles|F
+tt0092967|End of the Line|F
+tt0094318|White Water Summer|F
+tt0091814|Quicksilver|F
+tt0087633|The Little Sister|TV
+tt0207607|Mister Roberts|TV
+tt0087277|Footloose|F
+tt0085494|Enormous Changes at the Last Minute|F
+tt0085422|The Demon Murder Case|TV
+tt0083962|Forty Deuce|F
+tt0083833|Diner|F
+tt0044265|"The Guiding Light"|TV
+tt0082853|Only When I Laugh|F
+tt0080761|Friday the 13th|F
+tt0080863|Hero at Large|F
+tt0043229|"Search for Tomorrow"|TV
+tt0079209|The Gift|TV
+tt0079948|Starting Over|F
+tt0077975|Animal House|F

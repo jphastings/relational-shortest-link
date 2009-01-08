@@ -1,0 +1,55 @@
+nm0010169|Carlos Acosta|A
+nm0025483|Eva Amurri|A
+nm0000102|Kevin Bacon|A
+nm0058581|Justin Bartha|A
+nm2648716|Jordann Beal|A
+nm2698970|Himad Beg|A
+nm1377375|Rachel Bilson|A
+nm0089217|Orlando Bloom|A
+nm0001001|James Caan|A
+nm1622877|Kevin Cannon|A
+nm0151801|Richard Chang|A
+nm3041018|Aron Charach|A
+nm0154732|Jeff Chena|A
+nm2391806|Gary Cherkassky|A
+nm0159789|Hayden Christensen|A
+nm0001046|Julie Christie|A
+nm0177896|Bradley Cooper|A
+nm0177933|Chris Cooper|A
+nm1548590|Sinsu Co|A
+nm1591597|Simon Dasher|A
+nm1478076|Cesar De León|A
+nm0005576|Drea de Matteo|A
+nm2892950|Eddie D'vir|A
+nm2855622|Taylor Geare|A
+nm1492831|Vedant Gokhale|A
+nm0000160|Ethan Hawke|A
+nm1687772|Juri Henley-Cohn|A
+nm0000457|John Hurt|A
+nm2803471|Andy Karl|A
+nm0451234|Irrfan Khan|A
+nm3075091|Ashley Klein|A
+nm0846615|Sean T. Krishnan|A
+nm0479471|Shia LaBeouf|A
+nm0001458|Cloris Leachman|A
+nm0515116|Blake Lively|A
+nm1380939|Eliezer Meyer|A
+nm0089525|Adam Moreno|A
+nm3005577|Brad Naprixas|A
+nm0644919|Emilie Ohana|A
+nm0000204|Natalie Portman|A
+nm1617132|Nicholas Purcell|A
+nm0702572|Maggie Q|A
+nm1779590|Amy Raudenbush|A
+nm0000207|Christina Ricci|A
+nm3016279|Robert d Scott|A
+nm0795517|Qi Shu|A
+nm1160357|Gurdeep Singh|A
+nm1880888|Olivia Thirlby|A
+nm0899681|Goran Visnjic|A
+nm0908919|Eli Wallach|A
+nm0931654|Saul Williams|A
+nm0000705|Robin Wright Penn|A
+nm0947338|Anton Yelchin|A
+nm0949350|Burt Young|A
+nm0951309|Ugur Yücel|A

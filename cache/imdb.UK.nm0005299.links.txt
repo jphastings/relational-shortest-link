@@ -1,0 +1,33 @@
+tt1143289|"Cupid"|TV
+tt0831887|The Spirit|F
+tt0871425|Pretty/Handsome|TV
+tt0410975|"Desperate Housewives"|TV
+tt0485842|"Studio 60 on the Sunset Strip"|TV
+tt0486292|A Christmas Wedding|TV
+tt0460812|Griffin & Phoenix|F
+tt0469897|Diggers|F
+tt0404802|The Notorious Bettie Page|F
+tt0379786|Serenity|F
+tt0348914|"Deadwood"|TV
+tt0384573|Swimmers|F
+tt0361217|"Nip/Tuck"|TV
+tt0397139|"The D.A."|TV
+tt0371878|Piccadilly Jim|F
+tt0309530|Down with Love|F
+tt0218505|Path to War|TV
+tt0291628|"Leap of Faith"|TV
+tt0277615|Bug|F
+tt0108968|"Touched by an Angel"|TV
+tt0207889|"Jack & Jill"|TV
+tt0207201|What Women Want|F
+tt0246077|Metropolis|TV
+tt0165831|Held Up|F
+tt0123209|The Other Sister|F
+tt0143436|The Long Way Home|TV
+tt0239189|"Real Life"|TV
+tt0118290|"Cracker"|TV
+tt0119525|Levitation|F
+tt0111880|"American Gothic"|TV
+tt0117625|Shaughnessy|TV
+tt0113120|Friends at Last|TV
+tt0098844|"Law & Order"|TV

@@ -1,0 +1,15 @@
+nm0000576|Sean Penn|A
+nm0000209|Tim Robbins|A
+nm0000102|Kevin Bacon|A
+nm0000401|Laurence Fishburne|A
+nm0001315|Marcia Gay Harden|A
+nm0001473|Laura Linney|A
+nm0152430|Kevin Chapman|A
+nm0347509|Tom Guiry|A
+nm0002536|Emmy Rossum|A
+nm0004829|Spencer Treat Clark|A
+nm1468297|Andrew Mackin|A
+nm0625126|Adam Nelson|A
+nm0906301|Robert Wahlberg|A
+nm0641266|Jenny O'Hara|A
+nm0231283|John Doman|A

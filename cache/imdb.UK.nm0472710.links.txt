@@ -1,0 +1,49 @@
+tt0433309|"Numb3rs"|TV
+tt0481536|Harold & Kumar Escape from Guantanamo Bay|F
+tt1207650|Demption|F
+tt0841046|Walk Hard: The Dewey Cox Story|F
+tt1137992|"Wainy Days"|TV
+tt0829482|Superbad|F
+tt0810945|Live!|F
+tt0365830|Tenacious D in The Pick of Destiny|F
+tt0981315|The Nail|F
+tt0308055|Bobby|F
+tt0365407|Kill the Poor|F
+tt0486158|American Storage|F
+tt0379786|Serenity|F
+tt0328121|My Suicidal Sweetheart|F
+tt0372237|Guess Who|F
+tt0350258|Ray|F
+tt0366551|Harold & Kumar Go to White Castle|F
+tt0401593|Looking for Kitty|F
+tt0380124|"The Lyon's Den"|TV
+tt0455201|Sick in the Head|TV
+tt0312271|"Lucky"|TV
+tt0286947|Scorched|F
+tt0250292|Cheats|F
+tt0304669|The Santa Clause 2|F
+tt0271882|You Stupid Man|F
+tt0299535|Big Shot: Confessions of a Campus Bookie|TV
+tt0273028|"Undeclared"|TV
+tt0108757|"ER"|TV
+tt0272440|According to Spencer|F
+tt0269341|Two Can Play That Game|F
+tt0239986|Sidewalks of New York|F
+tt0236493|The Mexican|F
+tt0247122|"The Trouble with Normal"|TV
+tt0193676|"Freaks and Geeks"|TV
+tt0207524|How to Kill Your Neighbor's Dog|F
+tt0165859|Liberty Heights|F
+tt0147800|10 Things I Hate About You|F
+tt0120831|Slums of Beverly Hills|F
+tt0137296|"The Closer"|TV
+tt0118501|"Union Square"|TV
+tt0119349|The Ice Storm|F
+tt0118284|"Chicago Sons"|TV
+tt0118365|Justice League of America|TV
+tt0112122|"Pig Sty"|TV
+tt0108863|"Monty"|TV
+tt0111070|The Santa Clause|F
+tt0106220|Addams Family Values|F
+tt0098844|"Law & Order"|TV
+tt0107413|Life with Mikey|F

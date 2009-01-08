@@ -1,0 +1,15 @@
+nm0000102|Kevin Bacon|A
+nm0004979|David Alan Grier|A
+nm1073992|Eve|A
+nm0001718|Kyra Sedgwick|A
+nm0000973|Benjamin Bratt|A
+nm0502458|Carlos Leon|A
+nm0788335|Michael Shannon|A
+nm0723485|Kevin Rice|A
+nm0080049|Mos Def|A
+nm1403199|Hannah Pilkes|A
+nm1860474|Jessica Nagle|A
+nm1861576|Liam Daniels|A
+nm0372017|Joey Hazinsky|A
+nm1102528|Clara Hopkins Daniels|A
+nm1860313|Ashley C. Coombs|A

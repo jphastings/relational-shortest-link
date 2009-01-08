@@ -1,0 +1,66 @@
+tt0960136|"Dirty Sexy Money"|TV
+tt1310502|Fable 2|VG
+tt0947802|Lakeview Terrace|F
+tt0805666|"Shark"|TV
+tt0785018|Secret History of Religion: Knights Templar|TV
+tt0784964|Secret History of Religion: Doomsday - Book of Revelation|TV
+tt0379786|Serenity|F
+tt0272376|"The Division"|TV
+tt0387714|"All Grown Up"|TV
+tt0303461|"Firefly"|TV
+tt0101188|"Rugrats"|TV
+tt0293737|"The Proud Family"|TV
+tt0285356|"The Education of Max Bickford"|TV
+tt0247144|"Yes, Dear"|TV
+tt0265632|Recess: School's Out|F
+tt0165057|"Rude Awakening"|TV
+tt0112178|"Star Trek: Voyager"|TV
+tt0182656|"Zoe, Duncan, Jack & Jane"|TV
+tt0207889|"Jack & Jill"|TV
+tt0147643|Unbowed|F
+tt0108778|"Friends"|TV
+tt0207933|"Twice in a Lifetime"|TV
+tt0208226|Incognito|TV
+tt0175555|Deal of a Lifetime|F
+tt0118487|"Teen Angel"|TV
+tt0118437|"The Practice"|TV
+tt0115378|"Superman"|TV
+tt0118668|Back in Business|F
+tt0115278|"Mr. Rhodes"|TV
+tt0113443|It's My Party|F
+tt0110066|Houseguest|F
+tt0105935|"Aladdin"|TV
+tt0090418|"Designing Women"|TV
+tt0103525|"Rhythm & Blues"|TV
+tt0101187|"The Royal Family"|TV
+tt0086765|"Murder, She Wrote"|TV
+tt0090395|"Amen"|TV
+tt0096528|"Adam 12"|TV
+tt0096579|"Family Matters"|TV
+tt0092863|Deep Space|F
+tt0088470|"227"|TV
+tt0091750|Perry Mason: The Case of the Shooting Star|TV
+tt0088634|"The Twilight Zone"|TV
+tt0089242|Gus Brown and Midnight Brewster|TV
+tt0083454|"The New Odd Couple"|TV
+tt0086344|Sound of Sunshine - Sound of Rain|F
+tt0072472|"Barney Miller"|TV
+tt0078622|"Hart to Hart"|TV
+tt0077377|Crash|TV
+tt0068135|"The Streets of San Francisco"|TV
+tt0072585|"When Things Were Rotten"|TV
+tt0073010|Foster and Laurie|TV
+tt0053510|"Insight"|TV
+tt0073283|Let's Switch!|TV
+tt0068128|"Sanford and Son"|TV
+tt0070991|"Good Times"|TV
+tt0071370|The Crazy World of Julius Vrooder|F
+tt0465706|Change at 125th Street|TV
+tt0069615|"The New Perry Mason"|TV
+tt0068049|"The Bob Newhart Show"|TV
+tt0069587|"Griff"|TV
+tt0062568|"Hawaii Five-O"|TV
+tt0068103|"Maude"|TV
+tt0070686|Shirts/Skins|TV
+tt0069773|Beg, Borrow, or Steal|TV
+tt0066626|"All in the Family"|TV

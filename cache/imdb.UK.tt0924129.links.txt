@@ -1,0 +1,15 @@
+nm0000148|Harrison Ford|A
+nm0000576|Sean Penn|A
+nm0000501|Ray Liotta|A
+nm0000171|Ashley Judd|A
+nm1974397|Summer Bishil|A
+nm0395448|Lee Horsley|A
+nm0193295|Cliff Curtis|A
+nm2306578|Jaysha Patel|A
+nm1404408|Alice Eve|A
+nm0103797|Alice Braga|A
+nm2580087|Melody Khazae|A
+nm2030828|Merik Tadros|A
+nm2014390|Justin Chon|A
+nm0542000|Marshall Manesh|A
+nm1977583|Tim Chiou|A

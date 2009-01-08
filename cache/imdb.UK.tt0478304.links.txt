@@ -1,0 +1,23 @@
+nm0000093|Brad Pitt|A
+nm0000576|Sean Penn|A
+nm0789716|Fiona Shaw|A
+nm1169819|Pell James|A
+nm2128084|Crystal Mantecon|A
+nm0628351|Lisa Marie Newmyer|A
+nm1567113|Jessica Chastain|A
+nm1846817|Tamara Jolaine|A
+nm2054268|Jennifer Sipes|A
+nm0003930|Will Wallace|A
+nm1953427|Erinn Allison|A
+nm0795297|Michael Showers|A
+nm3007529|Kimberly Whalen|A
+nm1740994|Christopher Ryan|A
+nm1938755|Jackson Hurst|A
+nm2346014|Jodie Moore|A
+nm3083318|Danielle Rene|A
+nm3077316|Brayden Whisenhunt|A
+nm1390988|Chris Orf|A
+nm1921908|Robin Read|A
+nm0387489|Margaret Hoard|A
+nm2463296|Michael E. Harvey|A
+nm1950499|Anne Nabors|A
