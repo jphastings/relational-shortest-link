@@ -1,23 +1,2 @@
 Ever wondered what the shortest number of links between two wikipedia articles is?
 Now you can find out! Huzzah!
-
-*BE NICE* to the poor servers! Don't leave this script running for long periods of time. I know it doesn't make an enormous number of calls (its pretty slow :P) but it makes a lot more than you would by yourself.
-_Webadmins of the world thank you_
-
-If you want to use this and you have no clue what you're doing, take a look at the README inside the @bin@ directory, or look at the "Wiki":http://github.com/jphastings/relational-shortest-link/wikis/getting-it-working.
-
-Have a play about and let me know your thoughts you can tweet to me: @kedakai
-
-Here's one I made earlier:
-
-<pre>
-Going from 'Chuck_Norris' to 'David_Hasselhoff' using Wikipedia (en)
-Grabbing 'Chuck_Norris' ... 196 links
-Grabbing 'David_Hasselhoff' ... 192 links
-Grabbing 'United_States_Air_Force' ... 329 links
-Grabbing 'Baltimore,_Maryland' ... 553 links
-Grabbing 'Ryan,_Oklahoma' ... 44 links
-Grabbing 'United_States' ... 1017 links
-The shortest path from Chuck_Norris to David_Hasselhoff using Wikipedia (en)
- Chuck_Norris > United_States_Air_Force > United_States > David_Hasselhoff
-</pre>
