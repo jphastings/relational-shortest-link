@@ -48,7 +48,7 @@ class IMDB
   end
   
   def setdesc
-    @description = "IMDB (#{@region}; "+((@allowtv) ? "Allow" : "No")+" TV Shows)"
+    @description = "IMDB (#{@region}"+((@othertitles) ? "" : "; Films Only")+")"
     @cacheroot = "imdb.#{@region}"
   end
   
@@ -159,7 +159,17 @@ class IMDB
   end
   
   def displayname(id)
-    "#{id[1]} ("+((id[2]) ? "Film" : "Actor")+")"
+    case id[2]
+    when "A"
+      type = "Actor"
+    when "F"
+      type = "Film"
+    when "TV"
+      type = "TV Show"
+    when "VG"
+      type = "Video Game"
+    end
+    "#{id[1]} (#{type})"
   end
   
   def removeTV(links)

@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
-require 'wikipedia'
-require 'lastfm'
-require 'imdb'
+require 'modules/wikipedia'
+require 'modules/lastfm'
+require 'modules/imdb'
+
 require 'library'
 require 'fileutils'
 
