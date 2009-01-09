@@ -90,6 +90,12 @@ end
 start = fetcher.makeID(command[1])  
 goal = fetcher.makeID(command[2])
 
+if start == goal
+  puts "\rWoah! Your start and goal are the same. Pointless much? Use Ctrl-C to exit."
+  sleep
+  Process.exit
+end
+
 puts "\r---------------------------------------\nGoing from '"+fetcher.displayname(start)+"' to '"+fetcher.displayname(goal)+"' using "+fetcher.description
 
 if (not fetcher.directional?) or fetcher.canreverselookup?
