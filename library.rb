@@ -5,7 +5,7 @@ $downloadlimit = 500 * 8 # KB per second
 
 $proxy = nil
 if File.exists? "proxy.txt"
-  $proxy = $1 if open("proxy.txt").read.strip =~ /([0-2]?[0-9]{1,2}\.[0-2]?[0-9]{1,2}\.[0-2]?[0-9]{1,2}\.[0-2]?[0-9]{1,2}:[0-9]+)/
+  $proxy = open("proxy.txt").read.strip
 end
 
 def retrieve(url)
