@@ -13,10 +13,10 @@ class IMDB
   
   Opts = [
     {"name"=>"IMDB Region","question"=>"Which IMDB region would you like to use?","default"=>"UK"},
-    {"name"=>"Films Only","question"=>"Would you like to include TV shows and Video Games?","default"=>"n"}
+    {"name"=>"Films Only","question"=>"Would you like to include TV shows and Video Games?","default"=>false}
   ]
   
-  Defaults = [["tt1013753","Milk","F"],["nm0000102","Kevin Bacon","A"]]
+  Defaults = [["tt1013753","Milk","F"],["nm0000102","Kevin Bacon","P"]]
 
   def initialize(region = "UK",othertitles = true)
     setopts([region,othertitles])
@@ -65,8 +65,8 @@ class IMDB
     
     cachename = "cache/#{@cacheroot}.#{id[0]}.links.txt"
     if File.exists?(cachename)
-      links = open(cachename).readlines.collect{|link| [$1,$2,$3] if link.strip =~ /^((?:nm|tt)[0-9]+)\|(.+)\|(A|F|VG|TV)$/}
-      if not (@allowtv or id[2])
+      links = open(cachename).readlines.collect{|link| [$1,$2,$3] if link.strip =~ /^((?:nm|tt)[0-9]+)\|(.+)\|(P|F|VG|TV)$/}
+      if (not @othertitles) and id[2] == "P"
         links = removeTV(links)
       end
       puts " Cached  '"+displayname(id)+"' ... "+links.length.to_s+" links"
@@ -74,7 +74,7 @@ class IMDB
     end
     
     print "Grabbing '"+displayname(id)+"' ... "
-    url = "http://#{Regions[@region]}/"+((id[2] != "A") ? "title/#{id[0]}": "name/#{id[0]}") # add /fullcast if you're using the fullcast code
+    url = "http://#{Regions[@region]}/"+((id[2] != "P") ? "title/#{id[0]}": "name/#{id[0]}") # add /fullcast if you're using the fullcast code
     begin
       page = Hpricot(retrieve(url))
     rescue
@@ -83,11 +83,11 @@ class IMDB
       return links
     end
     
-    if id[2] != "A" # Is it's a 'title'
+    if id[2] != "P" # Is it's a 'title'
       
       # Note to self, Add director?
       
-      links = ((page/"table.cast")/:tr).collect {|row| [(row/"td.nm"/:a)[0].attributes['href'].gsub(/^\/name\/(nm[0-9]+)\/?$/,"\\1"),(row/"td.nm"/:a)[0].inner_text,"A"] if ["odd","even"].include?(row.attributes['class'])}.compact
+      links = ((page/"table.cast")/:tr).collect {|row| [(row/"td.nm"/:a)[0].attributes['href'].gsub(/^\/name\/(nm[0-9]+)\/?$/,"\\1"),(row/"td.nm"/:a)[0].inner_text,"P"] if ["odd","even"].include?(row.attributes['class'])}.compact
       
       # This is the code for the fullcast page, this really returns too many links
       # so I've decided to assume that the 'main' page for the film lists all the
@@ -103,7 +103,8 @@ class IMDB
     
     open(cachename,"w").print(links.collect {|link| link.join("|")}.join("\n"))
     
-    if not (@allowtv or id[2])
+    if (not @othertitles) and id[2] == "P"
+      p "getting here"
       links = removeTV(links)
     end
     
@@ -150,8 +151,20 @@ class IMDB
     end
     
     name = (page/:h1)[0].children[0].to_s.strip
+    if isfilm
+      mini = ((page/:h1)[0]/:span).inner_text
+      if name =~ /^"/ or mini =~ /\(TV\)/
+        type = "TV"
+      elsif mini =~ /\(VG\)/
+        type = "VG"
+      else
+        type = "F"
+      end      
+    else
+      type = "P"
+    end
     
-    return [string,name,(isfilm) ? "F" : "A"]
+    return [string,name,type]
   end
   
   def details(id)
@@ -160,8 +173,8 @@ class IMDB
   
   def displayname(id)
     case id[2]
-    when "A"
-      type = "Actor"
+    when "P"
+      return id[1]
     when "F"
       type = "Film"
     when "TV"
