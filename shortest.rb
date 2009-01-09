@@ -2,6 +2,7 @@
 require 'modules/wikipedia'
 require 'modules/lastfm'
 require 'modules/imdb'
+require 'modules/spitweb'
 
 require 'library'
 require 'fileutils'
@@ -32,6 +33,8 @@ when "lastfm_artists"
   chosen = Lastfm_artists
 when "lastfm_tracks"
   chosen = Lastfm_tracks
+when "spitweb"
+  chosen = Spitweb
 else
   puts "We don't have that module! please chose one of the following:"
   puts modules.join(", ")
@@ -101,20 +104,29 @@ puts "\r---------------------------------------\nGoing from '"+fetcher.displayna
 if (not fetcher.directional?) or fetcher.canreverselookup?
   # Two directional lookup
   
-  done = [[],[]]
+  done = [[start],[goal]]
   routes = [[[start]],[[goal]]]
   finished = []
+  firstrun = true
   
   dir = 0
   
   while finished == []
     nextdir = (dir == 0) ? 1 : 0
     
-    from = nil
-    while done[dir].include?(from) or from.nil?
+    begin
+      if routes[dir].length == 0
+        puts "Error! There are no more routes left to try from this direction, these points are not linked"+((fetcher.directional?)? " in this direction" : "")+". Use Ctrl-C to exit."
+        sleep
+        Process.exit
+      end
       route = routes[dir].shift
       from = route.last
-    end
+      if firstrun
+        break
+      end
+    end while done[dir].include?(from) or from.nil?
+    firstrun = (dir != 1) and (not firstrun)
     
     print "Hop #%d: " % (route.length)
     links = (dir == 0) ? fetcher.links_from(from) : fetcher.links_to(from)
@@ -131,13 +143,11 @@ if (not fetcher.directional?) or fetcher.canreverselookup?
           end
         end
       else
-        terminate = done[dir].include? to
-          
-        routes[dir].push(route + [to]) 
-        routes[dir].each do |forwards|
-          if forwards.last == from
-            routes[dir].delete(forwards)
-            if not terminate
+        if not done[dir].include? to
+          routes[dir].push(route + [to])
+          routes[dir].each do |forwards|
+            if forwards.last == from
+              routes[dir].delete(forwards)
               routes[dir].push(forwards + [to])
             end
           end
@@ -145,11 +155,6 @@ if (not fetcher.directional?) or fetcher.canreverselookup?
       end
     }
     done[dir].push from  
-    
-    if routes[dir].length == 0
-      puts "Error! There are no more routes left to try from this direction, these points are not linked"+((fetcher.directional?)? " in this direction" : "")+"."
-      Process.exit
-    end
     
     dir = nextdir
   end
@@ -170,6 +175,8 @@ else
       route = routes.shift
       from = route.last
     end
+    
+    print "Hop #%d: " % (route.length)
     
     fetcher.links_from(from).each do |to|
       if to == goal
