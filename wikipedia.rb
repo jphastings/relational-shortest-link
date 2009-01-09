@@ -12,7 +12,7 @@ class Wikipedia
   attr_reader :description
   
   Opts = [
-    {"name"=>"Allow Dates","question"=>"Would you like to include date pages?","default"=>"n"},
+    {"name"=>"Allow Dates","question"=>"Would you like to include date pages?","default"=>false},
     {"name"=>"Region","question"=>"Which wikipedia version would you like to use?","default"=>"en"}
   ]
   
@@ -21,8 +21,12 @@ class Wikipedia
   Regions = ["aa","ab","af","ak","als","am","an","ang","ar","arc","as","ast","av","ay","az","ba","bar","bat_smg","bcl","be","be_x_old","bg","bh","bi","bm","bn","bo","bpy","br","bs","bug","bxr","ca","cbk_zam","cdo","ce","ceb","ch","cho","chr","chy","co","cr","crh","cs","csb","cu","cv","cy","da","de","diq","dsb","dv","dz","ee","el","eml","en","eo","es","et","eu","ext","fa","ff","fi","fiu_vro","fj","fo","fr","frp","fur","fy","ga","gan","gd","gl","glk","gn","got","gu","gv","ha","hak","haw","he","hi","hif","ho","hr","hsb","ht","hu","hy","hz","ia","id","ie","ig","ii","ik","ilo","io","is","it","iu","ja","jbo","jv","ka","kaa","kab","kg","ki","kj","kk","kl","km","kn","ko","kr","ks","ksh","ku","kv","kw","ky","la","lad","lb","lbe","lg","li","lij","lmo","ln","lo","lt","lv","map_bms","mdf","mg","mh","mi","mk","ml","mn","mo","mr","mt","mus","my","myv","mzn","na","nah","nap","nds","nds_nl","ne","new","ng","nl","nn","no","nov","nrm","nv","ny","oc","om","or","os","pa","pag","pam","pap","pdc","pi","pih","pl","pms","ps","pt","qu","quality","rm","rmy","rn","ro","roa_rup","roa_tara","ru","rw","sa","sah","sc","scn","sco","sd","se","sg","sh","si","simple","sk","sl","sm","sn","so","sr","srn","ss","st","stq","su","sv","sw","szl","ta","te","tet","tg","th","ti","tk","tl","tlh","tn","to","tpi","tr","ts","tt","tum","tw","ty","udm","ug","uk","ur","uz","ve","vec","vi","vls","vo","wa","war","wo","wuu","xal","xh","yi","yo","za","zea","zh","zh_classical","zh_min_nan","zh_yue","zu"]
   
   def initialize(allowdates = false,region = "en")  
-    self.region = region
-    self.allowdates = allowdates
+    setopts([allowdates,region])
+  end
+  
+  def setopts(opts)
+    self.region = opts[1]
+    self.allowdates = opts[0]
   end
   
   def region=(region)
@@ -34,18 +38,15 @@ class Wikipedia
   end
   
   def allowdates=(allowdates)
-    if @region != "en"
-      @allowdates = allowdates 
-      puts "Be warned: I haven't implemented Month/Day combo removing in non-english languages yet"
+    case allowdates
+    when /y|true/i,true
+      @allowdates = true
+    when /n|false/i,false
+      @allowdates = false
     else
-      allowed = [true,false]
-
-      if not allowed.include? allowdates
-        raise "You need to specify true or false to allow date pages or not"
-      end
-      @allowdates = allowdates  
+      raise "Sorry, please specify true or false for whether to allow date pages or not"
     end
-    setdesc
+    allowdates
   end
   
   def setdesc
@@ -136,29 +137,25 @@ class Wikipedia
     return {"url"=>"http://#{@region}.wikipedia.org/wiki/#{id}"}
   end
   
-  def makeID(id)
-    cachename = "cache/wikipedia.#{@region}.#{id}.trueid.txt"
-    if File.exists?(cachename) and id.downcase != "special:random"
+  def makeID(string)
+    string.gsub!(/\ /,"_")
+    cachename = "cache/wikipedia.#{@region}.#{string}.trueid.txt"
+    if File.exists?(cachename)
       return open(cachename).read
     end
     
     begin    
-      page = Hpricot(retrieve("http://#{@region}.wikipedia.org/wiki/#{id}"))
+      page = Hpricot(retrieve("http://#{@region}.wikipedia.org/wiki/#{string}"))
     rescue
-      raise "There is no page on #{@description} called '"+displayname(id)+"'"
+      raise "There is no page on #{@description} called '"+displayname(string)+"'"
     end
     id = (page/".printfooter"/:a)[0].attributes['href'].gsub(/^(?:http:\/\/#{@region}.wikipedia.org)?\/wiki\/(.+)$/,"\\1")
-    if id.downcase != "special:random"
-      open(cachename,"w").print(id)
-    end
+    
+    open(cachename,"w").print(id) if string.downcase != "special:random"
     return id
   end
   
   def displayname(id)
-    URI.unescape(id).gsub(/_/," ")
-  end
-  
-  def self.displayname(id)
     URI.unescape(id).gsub(/_/," ")
   end
 end

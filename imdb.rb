@@ -19,24 +19,31 @@ class IMDB
   Defaults = [["tt1013753","Milk","F"],["nm0000102","Kevin Bacon","A"]]
 
   def initialize(region = "UK",othertitles = true)
-    
-    self.othertitles = othertitles
-    self.region = region
+    setopts([region,othertitles])
+  end
+  
+  def setopts(opts)
+    self.region = opts[0]
+    self.othertitles = opts[1]
   end
   
   def region=(region)
     if not Regions.include? region
-      raise "Sorry, #{region} isn't a valid region - use: "+Regions.keys.join(", ")
+      raise "Sorry, #{region} isn't a valid region - use one of the following\n"+Regions.keys.join(", ")
     end
     @region = region
     setdesc
   end
   
   def othertitles=(othertitles)
-    if not [true,false].include? othertitles
+    case othertitles
+    when /y|true/i,true
+      @othertitles = true
+    when /n|false/i,false
+      @othertitles = false
+    else
       raise "Sorry, please specify true or false for whether to allow TV shows and video games"
     end
-    @othertitles = othertitles
     setdesc
   end
   
@@ -151,12 +158,7 @@ class IMDB
     
   end
   
-  # Hmmm, this can't be right
   def displayname(id)
-    "#{id[1]} ("+((id[2]) ? "Film" : "Actor")+")"
-  end
-  
-  def self.displayname(id)
     "#{id[1]} ("+((id[2]) ? "Film" : "Actor")+")"
   end
   

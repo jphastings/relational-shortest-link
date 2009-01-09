@@ -3,133 +3,93 @@ require 'wikipedia'
 require 'lastfm'
 require 'imdb'
 require 'library'
+require 'fileutils'
 
 modules = ["wikipedia","imdb","lastfm_artists","lastfm_tracks"]
 
 command = ARGV
 $stdout.sync = true
 
-if command.include? "-i"
-  if command.length == 1
-    command = []
-  else
-    command.delete("-i")
-  end
-  
-  puts "You're in interactive mode"
-  
-  default = (command[0].nil?) ? "wikipedia" : command[0]
-  print "What module would you like to use? [#{default}] "
-  command[0] = $stdin.gets.strip
-  if command[0].empty?
-    command[0] = default
-  end
-  
-  # There has to be a better way of doing this...
-  case command[0]
-  when "wikipedia"
-    chosen = Wikipedia
-  when "imdb"
-    chosen = IMDB
-  when "lastfm_artists"
-    chosen = Lastfm_artists
-  when "lastfm_tracks"
-    chosen = Lastfm_tracks
-  else
-    puts "We don't have that module available"
-    Process.exit
-  end
-  
-  opts = chosen::Opts
-  defaults = chosen::Defaults
-  
-  default = (command[1].nil?) ? defaults[0] : command[1]
-  print "Where would you like to start? ["+chosen.displayname(default)+"] "
-  command[1] = $stdin.gets.strip
-  if command[1].empty?
-    command[1] = default
-  end
-  
-  default = (command[2].nil?) ? defaults[1] : command[2]
-  print "Where would you like to start? ["+chosen.displayname(default)+"] "
-  command[2] = $stdin.gets.strip
-  if command[2].empty?
-    command[2] = default
-  end
-    
-  
-  point = 3
-  if opts.length > 0
-    opts.each do |opt|
-      default = (command[point].nil?) ? opt['default'] : command[point]
-      print "#{opt['question']} [#{default}] "
-      command[point] = $stdin.gets.strip
-      if command[point].empty?
-        command[point] = default
-      end
-      
-      point += 1
-    end
-  end
+if command.nil?
+  command = []
 end
-  
+
+default = (command[0].nil?) ? "wikipedia" : command[0]
+print "Which module would you like to use? [#{default}] "
+command[0] = $stdin.gets.strip
+if command[0].empty?
+  command[0] = default
+end
+
+# There has to be a better way of doing this...
 case command[0]
 when "wikipedia"
-  fetcher = Wikipedia.new
-  
-  if not command[3].nil?
-    fetcher.allowdates = (command[3] =~ /y|true/i) ? true : false
-  end
-  
-  if not command[4].nil?
-    fetcher.region = command[4]
-  end
-  
-  start = fetcher.makeID((command[1]) ? command[1] : "Special:Random")
-  goal  = fetcher.makeID((command[2]) ? command[2] : "Kevin Bacon")
-
+  chosen = Wikipedia
 when "imdb"
-  fetcher = IMDB.new
-  
-  if not command[3].nil?
-    fetcher.region = command[3]
-  end
-  
-  if not command[4].nil?
-    fetcher.othertitles = (command[4] =~ /y|true/i) ? true : false
-  end
-  
-  start = fetcher.makeID((command[1]) ? command[1] : "Special:Random")
-  goal  = fetcher.makeID((command[2]) ? command[2] : "Kevin Bacon")
-
-when "lastfm_tracks"
-  fetcher = Lastfm_tracks.new
-  
-  if not command[3].nil?
-    fetcher.threshold = command[3].to_i
-  end
-
-  start = fetcher.makeID((command[1]) ? command[1] : "This Love|Maroon 5")
-  goal  = fetcher.makeID((command[2]) ? command[2] : "Kryptonite|3 Doors Down")
-
+  chosen = IMDB
 when "lastfm_artists"
-  fetcher = Lastfm_artists.new
-  
-  if not command[3].nil?
-    fetcher.threshold = command[3].to_i
-  end
-
-  start = fetcher.makeID((command[1]) ? command[1] : "Muse")
-  goal  = fetcher.makeID((command[2]) ? command[2] : "The Strokes")
-
+  chosen = Lastfm_artists
+when "lastfm_tracks"
+  chosen = Lastfm_tracks
 else
-  puts "Usage: shortest <module> [<start point> [<end point>]]"
-  puts " Currently supported Modules: "+modules.join(", ")
+  puts "We don't have that module! please chose one of the following:"
+  puts modules.join(", ")
+  puts "Use Ctrl-C to exit."
+  sleep
   Process.exit
 end
 
+opts = chosen::Opts
+defaults = chosen::Defaults
+fetcher = chosen.new
 
-puts "Going from '"+fetcher.displayname(start)+"' to '"+fetcher.displayname(goal)+"' using "+fetcher.description
+default = (command[1].nil?) ? defaults[0] : command[1]
+print "Where would you like to start? ["+fetcher.displayname(default)+"] "
+command[1] = $stdin.gets.strip
+if command[1].empty?
+  command[1] = default
+end
+
+default = (command[2].nil?) ? defaults[1] : command[2]
+print "Where would you like to start? ["+fetcher.displayname(default)+"] "
+command[2] = $stdin.gets.strip
+if command[2].empty?
+  command[2] = default
+end
+
+point = 3
+if opts.length > 0
+  opts.each do |opt|
+    default = (command[point].nil?) ? opt['default'] : command[point]
+    print "#{opt['question']} [#{default}] "
+    command[point] = $stdin.gets.strip
+    if command[point].empty?
+      command[point] = default
+    end
+    
+    point += 1
+  end
+  
+  fetcher.setopts(command[3..-1])
+end 
+
+print "Thanks, working out the starting IDs..."
+
+# Here is as good-a place as any I suppose...
+if not File.directory? "cache/"
+  begin
+    FileUtils.mkdir "cache/"
+  rescue
+    puts "I can't create the directory 'cache'. Use Ctrl-C to exit."
+    sleep
+    Process.exit
+  end
+end
+
+start = fetcher.makeID(command[1])  
+goal = fetcher.makeID(command[2])
+
+puts "\r---------------------------------------\nGoing from '"+fetcher.displayname(start)+"' to '"+fetcher.displayname(goal)+"' using "+fetcher.description
 
 if (not fetcher.directional?) or fetcher.canreverselookup?
   # Two directional lookup
@@ -242,3 +202,6 @@ finished.sort{|x,y| x.length <=> y.length}.each do |route|
   puts route.length.to_s+": "+(route.collect{|id| fetcher.displayname(id)}.join((fetcher.directional?) ? " > " : " <-> "))
   last = route.length
 end
+
+puts "Use Ctrl-C to quit"
+sleep

@@ -76,7 +76,11 @@ class Lastfm_artists < Lastfm
   
   def initialize (threshold = 90)
     @type = "artists"
-    self.threshold = threshold
+    setopts([threshold])
+  end
+  
+  def setopts(opts)
+    self.threshold = opts[0]
   end
   
   def makeID(string)
@@ -100,10 +104,6 @@ class Lastfm_artists < Lastfm
   def displayname(id)
     URI.unescape(id)
   end
-  
-  def self.displayname(id)
-    URI.unescape(id)
-  end
 end
 
 class Lastfm_tracks < Lastfm
@@ -116,7 +116,11 @@ class Lastfm_tracks < Lastfm
   
   def initialize (threshold = 12)
     @type = "tracks"
-    self.threshold = threshold
+    setopts([threshold])
+  end
+  
+  def setopts(opts)
+    self.threshold = opts[0]
   end
   
   def makeID(string)
@@ -152,9 +156,4 @@ class Lastfm_tracks < Lastfm
     "#{track} (#{artist})"
   end
   
-  def self.displayname(id)
-    track, artist = id.split("|")
-    
-    "#{track} (#{artist})"
-  end
 end
