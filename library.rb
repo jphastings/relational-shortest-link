@@ -3,13 +3,20 @@ require 'open-uri'
 
 $downloadlimit = 500 * 8 # KB per second
 
+$proxy = nil
+if File.exists? "proxy.txt"
+  $proxy = $1 if open("proxy.txt").read.strip =~ /([0-2]?[0-9]{1,2}\.[0-2]?[0-9]{1,2}\.[0-2]?[0-9]{1,2}\.[0-2]?[0-9]{1,2}:[0-9]+)/
+end
+
 def retrieve(url)
   starttime = 0
   last = 0
   taken = 0
   
+  
+  
 	open(url,
-	"User-agent"=>"Relational Shortest Link script: http://github.com/jphastings/reltional-shortest-link/ (Ruby)").read
+	"User-agent"=>"Relational Shortest Link script: http://github.com/jphastings/reltional-shortest-link/ (Ruby)",:proxy=>$proxy).read
 #	:content_length_proc => lambda {|exp_size|
 #    starttime = Time.now.to_f
 #  },
